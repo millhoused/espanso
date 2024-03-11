@@ -1,0 +1,58 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+
+  - trigger: ";dm "
+    replace: "Don Millhouse"
+    
+  - trigger: ";me.e"
+    replace: "don.millhouse@gmail.com"
+
+  - trigger: ";me.linkedin"
+    replace: "https://www.linkedin.com/in/donmillhouse/"
+
+  - trigger: ";me.twitter"
+    replace: "https://twitter.com/DatabaseDon"
+
+  - trigger: ";me.gh"
+    replace: "https://github.com/millhoused/"
+
+    # Home Address
+  - trigger: ";me.add "
+    replace: "8900 Oxwood CT\nMaineville, OH 45039\n"
+
+  - trigger: ";mp "
+    replace: "My Pleasure"
+    
+  - trigger: ";tks "
+    replace: "Thanks,\nDon"
+    
+  - trigger: ";ty "
+    replace: "Thank you"
+    
+  - trigger: ";yw "
+    replace: "You're Welcome"
+    
+    # Office Phone
+  - trigger: ";oph "
+    replace: "513-273-9289"
+    
+    # Google Phone
+  - trigger: ";gph "
+    replace: "513-341-6285"
+    
+    # My Cell Phone
+  - trigger: ";mph "
+    replace: "513-535-7691"
+  
+    # Office Address
+  - trigger: ";oadd "
+    replace: "345 High St.\nSTE 600\nHamilton, OH 45011\n"
+    
