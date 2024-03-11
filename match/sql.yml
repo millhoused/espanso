@@ -1,0 +1,85 @@
+
+  # sql.yml SQL Server match file
+matches:
+
+    # Stored Procedure ToDo
+  - trigger: ";ptd "
+    replace: "#ToDo (Don Millhouse) - "
+    
+  - trigger: ";sqlheader"
+    replace: |
+                    /*============================================================================
+                    Name        : procname
+                    Description : 
+
+                    *** Change Log ***
+
+                    Author              Date        Detail
+                    -------------       ----------  ----------------------------------------------
+                    Don Millhouse       yyyy-mm-dd  Created
+                    
+                    
+                    -- Execution Example
+                    
+                    EXEC procname
+                    
+                    
+                    ============================================================================*/
+  - trigger: ";sqlchange"
+    replace: |
+                *** Change Log ***
+
+                Author              Date        Detail
+                -------------       ----------  ----------------------------------------------
+                Don Millhouse       yyyy-mm-dd  Describe_The_Change
+                
+  - trigger: ";sqltest"
+    replace: |
+                USE YOURDATABASENAME
+                GO
+                CHECKPOINT
+                GO
+                DBCC DROPCLEANBUFFERS
+                GO
+
+                DBCC FREESYSTEMCACHE ('ALL')
+                DBCC FREEPROCCACHE
+
+                SET STATISTICS TIME ON
+                SET STATISTICS IO ON
+
+
+                -- PUT YOUR CODE HERE
+
+
+                SET STATISTICS TIME OFF
+                SET STATISTICS IO OFF
+
+  - trigger: ";sqlofile"
+    replace: |
+                $(ESCAPE_SQUOTE(SQLLOGDIR))\$(ESCAPE_SQUOTE(JOBNAME))_$(ESCAPE_SQUOTE(STEPID))_$(ESCAPE_SQUOTE(DATE))_$(ESCAPE_SQUOTE(TIME)).txt
+
+  - trigger: ";oops"
+    replace: |
+                PRINT 'You have 23 hours to cancel this query'
+                GO
+                WAITFOR DELAY '23:00:00'
+                PRINT 'Oh My, we are past the WAITFOR'
+                GO
+                SET NOEXEC ON  -- Ignores the rest of the script
+                
+  # PowerShell Oops
+  - trigger: ";psoops"
+    replace: |
+                
+                throw "You are not supposed to hit F5"
+                #Oops Code
+                #Abort if you press F5 by mistake
+                Write-Host Should not receive this message
+                
+                
+  - trigger: ";sqltoday"
+    replace: "SELECT DATEADD(DAY, DATEDIFF(DAY, 0, GETDATE()), 0)"
+    
+    
+

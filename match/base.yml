@@ -1,0 +1,270 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ";date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+# Date and Time Stamps
+
+  # Print the current date
+  - trigger: ";d "
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y%m%d"
+
+  # Print the current date
+  - trigger: ";mdy "
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m-%d-%Y"
+
+  # Print the current date
+  - trigger: ";mdy/ "
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the current date
+  - trigger: ";ymd "
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
+  # Print the current date
+  - trigger: ";ymd/ "
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y/%m/%d"
+
+  - trigger: ";ts "
+    replace: "{{timestamp}}"
+    vars:
+      - name: timestamp
+        type: date
+        params:
+          format: "%b %d, %Y %I:%M%p"
+
+  - trigger: ";t "
+    replace: "{{time}}"
+    vars:
+      - name: time
+        type: date
+        params:
+          format: "%R"
+
+
+
+  # Print the output of a shell command
+  - trigger: ";shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+  
+  # Obsidian Frequently Used Phrases/Words
+  - trigger: ";cb "
+    replace: "Cache Bloat"
+    
+  - trigger: ";da "
+    replace: "Database Admin"
+    
+  - trigger: ";do "
+    replace: "Done"
+    
+  - trigger: ";ds "
+    replace: "Drive Space"
+    
+  - trigger: ";el "
+    replace: "Error Log Check"
+    
+  - trigger: ";eec "
+    replace: "EEC Expedient Enterprise Cloud"
+    
+  - trigger: ";fj "
+    replace: "Failed Jobs"
+    
+  - trigger: ";fti "
+    replace: "Full Text Index"
+    
+  - trigger: ";ge "
+    replace: "Growth Events"
+    
+  - trigger: ";is "
+    replace: "Infrastructure Support"
+    
+  - trigger: ";ndb "
+    replace: "Newly Created Databases"
+    
+  - trigger: ";nn "
+    replace: "Nothing New"
+    
+  - trigger: ";nt "
+    replace: "New TMS"
+    
+  - trigger: ";oh "
+    replace: "Ola Hallengren Checks"
+    
+  - trigger: ";os "
+    replace: "Open Systems"
+    
+  - trigger: ";rg "
+    replace: "Red Gate"
+    
+  - trigger: ";sk "
+    replace: "Skipped"
+    
+  - trigger: ";sb "
+    replace: "See Below"
+    
+  - trigger: ";sc "
+    replace: "Server Checks"
+    
+  - trigger: ";ssc "
+    replace: "Server and SysAdmin Checks"
+    
+  - trigger: ";ssrs "
+    replace: "SSRS SQL Server Reporting Services"
+    
+  - trigger: ";te "
+    replace: "Timekeeping and Email"
+    
+  - trigger: ";ps "
+    replace: "```PowerShell\n"
+    
+  - trigger: ";sq "
+    replace: "```SQL\n"
+    
+  - trigger: ";td "
+    replace: "#ToDo - "
+       
+  - trigger: ";dm "
+    replace: "Don Millhouse"
+    
+  - trigger: ";me.e"
+    replace: "don.millhouse@gmail.com"
+
+  - trigger: ";me.linkedin"
+    replace: "https://www.linkedin.com/in/donmillhouse/"
+
+  - trigger: ";me.twitter"
+    replace: "https://twitter.com/DatabaseDon"
+
+  - trigger: ";me.gh"
+    replace: "https://github.com/millhoused/"
+
+    # Home Address
+  - trigger: ";me.add "
+    replace: "8900 Oxwood CT\nMaineville, OH 45039\n"
+
+  - trigger: ";mp "
+    replace: "My Pleasure"
+    
+  - trigger: ";tks "
+    replace: "Thanks,\nDon"
+    
+  - trigger: ";ty "
+    replace: "Thank you"
+    
+  - trigger: ";yw "
+    replace: "You're Welcome"
+    
+    # Office Phone
+  - trigger: ";oph "
+    replace: "513-273-9289"
+    
+    # Google Phone
+  - trigger: ";gph "
+    replace: "513-341-6285"
+    
+    # My Cell Phone
+  - trigger: ";mph "
+    replace: "513-535-7691"
+  
+    # Office Address
+  - trigger: ";oadd "
+    replace: "345 High St.\nSTE 600\nHamilton, OH 45011\n"
+    
+  - trigger: ";-50 "
+    replace: "--------------------------------------------------"
+    
+  - trigger: ";-100 "
+    replace: "----------------------------------------------------------------------------------------------------"
+    
+  - trigger: ";*50 "
+    replace: "**************************************************"
+    
+  - trigger: ";*100 "
+    replace: "****************************************************************************************************"
+    
+  - trigger: ";=50 "
+    replace: "=================================================="
+    
+  - trigger: ";=100 "
+    replace: "===================================================================================================="
+    
+  - trigger: ";#50 "
+    replace: "##################################################"
+    
+  - trigger: ";#100 "
+    replace: "####################################################################################################"
+   
+   
+#:mdtag is used to quickly create a tag notation for Zettlekasten in code blocks.
+  - trigger: ";mdtag"
+    replace: "`#$|$`  "
+
+
+#id creates a timestamp for unique ids in notes like Zettlr - handy for other apps that don't include that functionality
+  - trigger: ";id"
+    replace: "{{time}}  "
+    vars:
+      - name: time
+        type: date
+        params:
+          format: "%Y%m%d%H%M%S"
+
+
+#cf creates a code fence - enclosed three `'s
+  - trigger: ";cf"
+    replace: "```\n$|$\n```"
+
