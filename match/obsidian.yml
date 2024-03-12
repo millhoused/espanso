@@ -10,79 +10,81 @@
 matches:
 
 # Obsidian Frequently Used Phrases/Words
-  - trigger: ";cb "
+  - trigger: ";cb"
     replace: "Cache Bloat"
     
-  - trigger: ";da "
+  - trigger: ";da"
     replace: "Database Admin"
     
-  - trigger: ";do "
+  - trigger: ";do"
     replace: "Done"
     
-  - trigger: ";ds "
+  - trigger: ";ds"
     replace: "Drive Space"
     
-  - trigger: ";el "
+  - trigger: ";el"
     replace: "Error Log Check"
     
-  - trigger: ";eec "
+  - trigger: ";eec"
     replace: "EEC Expedient Enterprise Cloud"
     
-  - trigger: ";fj "
+  - trigger: ";fj"
     replace: "Failed Jobs"
     
-  - trigger: ";fti "
+  - trigger: ";fti"
     replace: "Full Text Index"
     
-  - trigger: ";ge "
+  - trigger: ";ge"
     replace: "Growth Events"
     
-  - trigger: ";is "
+  - trigger: ";is"
     replace: "Infrastructure Support"
     
-  - trigger: ";ndb "
+  - trigger: ";ndb"
     replace: "Newly Created Databases"
     
-  - trigger: ";nn "
+  - trigger: ";nn"
     replace: "Nothing New"
     
-  - trigger: ";nt "
+  - trigger: ";nt"
     replace: "New TMS"
     
-  - trigger: ";oh "
+  - trigger: ";oh"
     replace: "Ola Hallengren Checks"
     
-  - trigger: ";os "
+  - trigger: ";os"
     replace: "Open Systems"
     
-  - trigger: ";rg "
+  - trigger: ";rg"
     replace: "Red Gate"
     
-  - trigger: ";sk "
+  - trigger: ";sk"
     replace: "Skipped"
     
-  - trigger: ";sb "
+  - trigger: ";sb"
     replace: "See Below"
     
-  - trigger: ";sc "
+  - trigger: ";sc"
     replace: "Server Checks"
     
-  - trigger: ";ssc "
+  - trigger: ";ssc"
     replace: "Server and SysAdmin Checks"
     
-  - trigger: ";ssrs "
+  - trigger: ";ssrs"
     replace: "SSRS SQL Server Reporting Services"
     
-  - trigger: ";te "
+  - trigger: ";te"
     replace: "Timekeeping and Email"
     
-  - trigger: ";ps "
+  - trigger: ";ps"
     replace: "```PowerShell\n"
-    
-  - trigger: ";sq "
+    word: true
+   
+  - trigger: ";sq"
     replace: "```SQL\n"
+    word: true
     
-  - trigger: ";td "
+  - trigger: ";td"
     replace: "#ToDo - "
        
 #:mdtag is used to quickly create a tag notation for Zettlekasten in code blocks.

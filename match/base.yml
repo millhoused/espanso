@@ -35,7 +35,7 @@ matches:
         type: date
         params:
           format: "%Y%m%d"
-
+    
   # Print the current date
   - trigger: ";mdy "
     replace: "{{mydate}}"
