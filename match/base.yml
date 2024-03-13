@@ -115,3 +115,9 @@ matches:
             <table border = 2><tr><th>ColumnHeading1</th><th>ColumnHeading2</th><th>ColumnHeading3</th></tr><tr><td>Row1Value1</td><td>Row1Value2</td><td>Row1Value3</td></tr><tr><td>Row2Value1</td><td>Row2Value2</td><td>Row2Value3</td></tr></table>
             </body>
             </html>
+            
+  # Bash file mac first line
+  - trigger: ";bash"
+    replace: "#!/usr/bin/env bash"
+    word: true
+    
