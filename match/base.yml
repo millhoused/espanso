@@ -101,4 +101,17 @@ matches:
 
   # And much more! For more information, visit the docs: https://espanso.org/docs/
   
- 
+  # Shell of an html page with required tags and a table to boot
+  - trigger: ";html"
+    replace: |
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <title>TitleHere</title>
+            <meta charset="utf-8">
+            </head>
+            <body bgcolor=white>
+            <H1>HeadingHere</H1>
+            <table border = 2><tr><th>ColumnHeading1</th><th>ColumnHeading2</th><th>ColumnHeading3</th></tr><tr><td>Row1Value1</td><td>Row1Value2</td><td>Row1Value3</td></tr><tr><td>Row2Value1</td><td>Row2Value2</td><td>Row2Value3</td></tr></table>
+            </body>
+            </html>
