@@ -118,6 +118,11 @@ matches:
             
   # Bash file mac first line
   - trigger: ";bash"
-    replace: "#!/usr/bin/env bash"
+    replace: "#!/bin/bash"
+    word: true
+    
+  # Bash file linux first line
+  - trigger: ";lbash"
+    replace: "#!/usr/bin/bash"
     word: true
     
